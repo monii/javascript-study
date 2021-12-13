@@ -1,0 +1,94 @@
+--------------
+# null 병합 연산자 '??'
+
+### null 병합 연산자란❓
+'확정되어있는' 변수를 찾을 수 있는 스펙에 추가된지 얼마 안 된 문법이다.
+다시 말해서 null을 체크하고 값을 세팅해주는 심플한 문법이다.
+
+<br/>
+### 사용법
+```
+// 문법
+x = a ?? b
+
+// 동일한 기능을 하는 문법
+x = (a !== null && a !== undefined) ? a : b;
+
+// 간단한 예시
+let firstName = null;
+let lastName = null;
+let nickName - "바이올렛";
+
+console.log(firstName ?? lastName ?? nickName ?? "익명 사용자");
+```
+
+### '??'와 '||'의 차이
+기능상으로 보면 '||'와 매우 비슷하다. 하지만 둘 사이에는 결정적인 차이점이 있다.
+- '||'는 첫 번째 참 같은 값(truthy)을 반환한다.
+- '??'는 첫 번째 정의된 값을 반환한다.
+- 위 두가지는 [논리연산자](https://ko.javascript.info/logical-operators)의 예시처럼 다른 결과를 나타낸다.
+- 예시
+```
+let height = 0;
+
+alert(height || 100); // 100
+alert(height ?? 100); // 0
+```
+- 위 예시에서 height은 0이 할당되었는데 0은 실질적으로 논리연산에서 falsy한 값으로 취급된다. 반면 ??의 경우 null이나 undefined이기 때문에 정확하게 식별이 가능하다.
+
+
+### 연산자 우선순위
+- '??'의 연산자 우선순위는 '5'로 꽤 낮다. 따라서 복잡한 표현식 안에선 괄호를 추가해주는 것이 좋다.
+```
+// 에러케이스 1
+let height = '';
+console.log(height === '' || height ?? 'null 아니네');
+
+// 정상케이스 1
+let height = '';
+console.log(height === '' || (height ?? 'null 아니네'));
+```
+
+### 추가 예시
+```
+function getMiscObj(){
+  return {
+    aNullProperty: null,
+    emptyText: "", // this is not falsy
+    someNumber: 42
+  };
+};
+
+const miscObj = getMiscObj();
+
+const newObj = {};
+newObj.propA = miscObj.aNullProperty ?? "default for A";
+newObj.propB = miscObj.emptyText ?? "default for B";
+newObj.propC = miscObj.someNumber ?? 0;
+
+console.log(newObj.propA); // "default for A"
+console.log(newObj.propB); // "" (as the empty string is not null or undefined)
+console.log(newObj.propC); // 42
+```
+
+### Optional Chaining
+- Optional chaining '?.'은 '.'체이닝과 동일한 기능을 하는데 참조 값이 nullish한 경우에 에러를 안뿜고 undefined를 반환한다. 프로퍼티가 없을 경우 기본적으로 에러를 발생시키는데 이러한 경우를 방지해준다.
+```
+// 예제
+const person = {
+  name: undefined
+};
+
+person.name // undefined
+person.name.firstName // Error! Uncaught TypeError: Cannot read property 'firstName' of undefined
+person.name?.firstName // undefined
+```
+
+### 👨‍🎓 후기
+null과 undefined를 체크하기 위한 간편한 문법인 것은 좋았다.
+하지만 실무에서 보통 isNull과 같은 공통함수를 만들어서 사용할텐데 공통함수에 포함되는 것이 아니라면 딱히 사용할 것 같지는 않다.
+
+좀 더 자세한 내용들은 아래 링크에 있다.
+- https://ko.javascript.info/nullish-coalescing-operator
+- https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator
+--------------
