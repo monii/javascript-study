@@ -3,7 +3,7 @@
 - 기간 : 2021.12.01 ~ 
 - 목표 : 자바스크립트 최강자 🥇
 - 참고 사이트 : https://ko.javascript.info/
-- 멤버 : [송민준](https://github.com/dkaskgkdua), [배선영](), [안상민](), [김유경](), [이재만](), [유호영]()
+- 멤버 : [송민준](https://github.com/dkaskgkdua), [배선영](https://github.com/wlsrbqo123), [안상민](https://github.com/tkdals5846), [김유경](https://github.com/kyk4350), [이재만](), [유호영](https://github.com/monii)
 ---
 
 ## 📆 1주차 : 2021.12.08
