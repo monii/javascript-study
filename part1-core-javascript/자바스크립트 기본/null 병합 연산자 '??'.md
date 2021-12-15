@@ -10,7 +10,7 @@
 
 ### 사용법
 
-```
+```js
 // 문법
 x = a ?? b
 
@@ -32,7 +32,7 @@ console.log(firstName ?? lastName ?? nickName ?? "익명 사용자");
 - `??`는 첫 번째 정의된 값을 반환한다.
 - 위 두가지는 [논리연산자](https://ko.javascript.info/logical-operators)의 예시처럼 다른 결과를 나타낸다.
 - 예시
-```
+```js
 let height = 0;
 
 alert(height || 100); // 100
@@ -44,7 +44,7 @@ alert(height ?? 100); // 0
 ### 연산자 우선순위
 
 - `??`의 연산자 우선순위는 `5`로 꽤 낮다. 따라서 복잡한 표현식 안에선 괄호를 추가해주는 것이 좋다.
-```
+```js
 // 에러케이스 1
 let height = '';
 console.log(height === '' || height ?? 'null 아니네');
@@ -55,7 +55,7 @@ console.log(height === '' || (height ?? 'null 아니네'));
 ```
 
 ### 추가 예시
-```
+```js
 function getMiscObj(){
   return {
     aNullProperty: null,
@@ -78,7 +78,7 @@ console.log(newObj.propC); // 42
 
 ### Optional Chaining
 - Optional chaining `?.`은 `.`체이닝과 동일한 기능을 하는데 참조 값이 nullish한 경우에 에러를 안뿜고 undefined를 반환한다. 프로퍼티가 없을 경우 기본적으로 에러를 발생시키는데 이러한 경우를 방지해준다.
-```
+```js
 // 예제
 const person = {
   name: undefined
