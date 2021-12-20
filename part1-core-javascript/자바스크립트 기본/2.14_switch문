@@ -1,0 +1,112 @@
+# switch문
+복수의 `if` 조건문은 `switch`문으로 변환이 가능하다~!
+switch문을 사용한 비교법은 특정 변수를 다양한 상황에서 비교할 수 있게 해준다.
+
+## 문법
+`switch`문은 하나 이상의 `case`문으로 구성된다.
+케이스에 없는 경우 처리하는 `default`문이 있지만 없어도 무방하다.
+:star case문의 타입 매치는 `엄격`이다. / [앞서 정리했던 링크](https://github.com/dkaskgkdua/javascript-study/blob/main/part1-core-javascript/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20%EA%B8%B0%EB%B3%B8/2.10_if%EB%AC%B8.md#3-switch)
+
+```js
+switch(x) {
+  case 'value1':  // if ( x === 'value1')
+    ...
+    break;
+  case 'value2':  // if (x === 'value2')
+    ...
+    break;
+  default:
+    ...
+    break;
+}
+```
+
+* 변수 x의 값과 첫 번째 case문의 값 'value1'를 일치 비교한 후, 두 번째 case문의 값 'value2'와 비교한다. 이런 과정이 마지막까지 이어진다.
+* case문에서 변수 x의 값과 일치하는 값을 찾으면 해당 case문의 아래의 코드가 실행된다. 이때, break문을 만나거나 switch문이 끝나면 코드의 실행은 멈춘다.
+* 값과 일치하는 case문이 없다면, default문 아래의 코드가 실행된다.
+
+* switch case의 경우 break를 안걸고 특정 조건까지 순차적으로 실행하는 케이스도 있다. 아래의 예를 들어보겠다.
+
+```js
+// 예를 들어 권한 부여의 경우...
+// 1. User 2. Manager 3. Admin 의 권한이 순차적으로 있을 경우
+switch(x) {
+  case 'Admin':
+    'Admin 권한 부여 코드'
+  case 'Manager':
+    'Manager 권한 부여 코드'
+  case 'User':
+    'User 권한 부여 코드'
+  default:
+    '기본 처리 코드(예외 등등...)'
+}
+```
+
+기본 사용 예시
+```js
+let a = 2 + 2;
+switch (a) {
+  case 3:
+    alert('비교하려는 값보다 작다.');
+    break;
+  case 4:
+    alert('비교하려는 값과 일치한다.');
+    break;
+  case 5:
+    alert('비교하려는 값보다 크다.');
+    break;
+  default:
+    alert('어떤 값인지 파악 불가.);
+}
+```
+* 실행 결과는?
+<details>
+  <summary>결과</summary>
+  alert('비교하려는 값과 일치한다.'); 실행된다.
+</details>
+
+* break문이 없을 경우는?
+<details>
+  <summary>결과</summary>
+  alert('비교하려는 값과 일치한다.');
+  alert('비교하려는 값보다 크다.');
+  alert('어떤 값인지 파악 불가.);
+</details>
+
+* 표현식을 바꾸면 어떻게 될까?
+```js
+let a = "1";
+let b = 0;
+
+switch (+a) {
+ case b + 1:
+    alert("표현식 +a는 1, 표현식 b+1는 1이므로 이 코드가 실행됩니다.");
+    break;
+
+  default:
+    alert("이 코드는 실행되지 않습니다.");
+}
+```
+* 표현식 +a를 평가하면 1이 된다. 이 값은 b + 1이 실행된 값 1과 일치한다.
+
+## 여러 개의 "case"문 묶기
+코드가 같은 case문은 한데 묶을 수 있다. 아래 예시를 보자.
+```js
+let a = 3;
+
+switch (a) {
+  case 4:
+    alert('계산이 맞습니다!');
+    break;
+
+  case 3: // (*) 두 case문을 묶음
+  case 5:
+    alert('계산이 틀립니다!');
+    alert("수학 수업을 다시 들어보는걸 권유 드립니다.");
+    break;
+
+  default:
+    alert('계산 결과가 이상하네요.');
+}
+```
+* 위와 같은 방법으로 동일 로직이 필요한 경우 처리가 분기해서 처리가 가능하다.
