@@ -1,0 +1,224 @@
+# 문자열
+자바스크립트엔 글자 하나만 저장할 수 있는 별도의 자료형이 없다. 
+텍스트 형식의 데이터는 길이에 상관없이 문자열 형태로 저장된다.
+자바스크립트에서 문자열은 페이지 인코딩 방식과 상관없이 항상 UTF-16 형식을 따른다.
+
+## 따옴표
+따옴표의 종류가 무엇이 있었는지 상기해봅시다.
+문자열은 작은따옴표나 큰따옴표, 백틱으로 감쌀 수 있습니다.
+```js
+let single = '작은따옴표';
+let double = "큰따옴표";
+let backticks = `백틱`;
+```
+
+작은따옴표와 큰따옴표는 기능상 차이가 없다. 그런데 백틱에는 특별한 기능이 있는데 `템플릿 리터럴`이다.
+`${...}`와 같은 표현식을 사용하고 문자열 원하는 위치에 넣어주면 쉽게 삽입이 가능하다.
+```js
+function sum(a, b) {
+  return a + b;
+}
+alert(`1 + 2 = ${sum(1, 2)},`); // 1 + 2 = 3.
+```
+
+백틱을 사용하면 문자열을 여러 줄에 걸쳐 작성할 수도 있다.
+```js
+let guestList  = `손님 :
+ * 민준
+ * 호영
+ * 재만
+`;
+alert(guestList); // 손님 리스트를 여러 줄에 걸쳐 작성함
+```
+
+자연스럽게 여러 줄의 문자열이 만들어졌다. 
+작은따옴표나 큰따옴표를 사용하면 위와 같은 방식으로 여러줄짜리 문자열을 만들 수 없다.
+
+* 백틱은 `템플릿 함수`에서도 사용된다. `func`string`` 같이 첫번째 백틱 바로 앞에 함수 이름을 써주면, 이 함수는 백틱 안의 문자열 조각이나 표현식 평가 결과를 인수로 받아 자동으로 호출된다.
+이런 기능을 `태그드 템플릿`이라 한다. 많이 안쓴다고 하지만 [예시](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Template_literals#tagged_templates)를 구해왔다.
+```js
+var person = 'MJ';
+var age = 28 + 1;
+
+function myTag(strings, personExp, ageExp) {
+  var str0 = strings[0]; // "that "
+  var str1 = strings[1]; // " is a "
+    var ageStr;
+  if (ageExp > 99){
+    ageStr = 'centenarian';
+  } else {
+    ageStr = 'youngster';
+  }
+  return str0 + personExp + str1 + ageStr;
+}
+
+var output = myTag`that ${ person } is a ${ age }`;
+
+console.log(output);
+// that MJ is a youngster
+```
+
+## 특수 기호
+'줄 바꿈 문자'라 불리는 특수기호 `\n`을 사용하면 작은따옴표나 큰따옴표로도 여러 줄 문자열을 만들 수 있다.
+```js
+let guestList = "손님 : \n * 민준 \n * 호영 \n * 재만 \n";
+console.log(guestList);
+// 손님 :
+// * 민준
+// * 호영
+// * 재만
+```
+
+따옴표를 이용해 만든 여러 줄 문자열과 백틱을 이용해 만든 여러 줄 문자열은 표현 방식만 다를뿐 차이가 없다.
+```js
+let str1 = "Hello\nWorld";
+
+let str2 = `Hello
+World`;
+console.log(str1 === str2); // true
+```
+자바스크립트엔 줄 바꿈 문자를 비롯한 다양한 '특수' 문자들이 있다.
+| 특수 문자 | 설명 |
+| --------- | -----|
+| `\n`  | 줄바꿈 |
+| `\r`  | 캐리지 리턴, windown에선 케리지 리턴과 줄 바꿈 특수 문자를 조합해 줄을 바꿈(\r\n) |
+| `\'`,`\"` | 따옴표 |
+| `\\` | 역슬래시 |
+| `\t` | 탭 |
+| `\b`, `\f`, `\v` | 각각 백스페이스, 폼 피드, 세로 탭을 나타낸다. 호환성 유지를 위해 남아 있고 요즘엔 안씀 |
+| `\xXX` | 16진수 유니코드 `xx`로 표현한 유니코드 글자 |
+| `\uXXXX` | UTF-16 인코딩 규칙을 사용하는 16진수 코드 xxxx로 표현한 유니코드 기호이다.|
+| `\u{X...XXXXXX}(한개에서 여섯 개 사이) | UTF-32로 표현한 유니코드 기호. 몇몇 특수 글자는 두 개의 유니코드 기호를 사용해 4바이트 차지 |
+
+유니코드 예시
+```js
+alert( "\u00A9" ); // ©
+alert( "\u{20331}" ); // 佫, 중국어(긴 유니코드)
+alert( "\u{1F60D}" ); // 😍, 웃는 얼굴 기호(긴 유니코드)
+```
+
+모든 특수 문자는 '이스케이프 문자'라고 불리는 역슬래시로 시작함. 우아하게 사용하고자 한다면 백틱으로 사용하자!
+
+## 문자열 길이
+`length` 프로퍼티엔 문자열의 길이가 저장됨
+```js
+console.log(`My\n`.length); // 3 - \n은 특수문자 하나로 취급 됨.
+```
+
+## 특정 글자에 접근하기
+문자열 내 특정 위치인 `pos`에 있는 글자에 접근하려면 `[pos]`같이 대괄호를 이용하거나 `charAt()`을 호출하면 된다.
+위치는 0부터 시작된다.
+```js
+let str = `Hello`;
+
+// 첫 번째 글자
+console.log( str[0] ); // H
+console.log( str.charAt(0) ); // H
+
+// 마지막 글자
+console.log( str[str.length - 1] ); // o
+```
+근래에는 대괄호를 더 많이 사용하며 `charAt`은 하위 호환성을 위해 남겨둔 것이라 보면 됨.
+만약 빈 인덱스면 `[]`는 `undefined`, `charAt`은 빈 문자열을 반환한다.
+
+`for..of`를 사용하면 문자열을 구성하는 글자를 대상으로 반복 작업이 가능하다.
+```js
+for (let char of "Hello") {
+  console.log(char); // H, e, l, l, o
+}
+```
+
+## 문자열의 불변성
+문자열은 수정할 수 없다. 따라서 문자열 중간 글자 하나 바꾸려고 하면 에러가 생긴다.
+바꾸는 방법은 아래와 같다.
+```js
+let str = 'Hi';
+str = 'h' + str[1];
+```
+
+## 대소문자 변경
+메서드 `toLowerCase()`와 `toUpperCase()`를 사용한다.
+```js
+console.log( 'Interface'.toUpperCase() ); // INTERFACE
+console.log( 'Interface'.toLowerCase() ); // interface
+
+console.log( 'Interface'[0].toLowerCase() ); // i
+```
+
+## 부분 문자열 찾기
+1. `str.indexOf(substr, pos)`
+이 메서드는 문자열 `str`의 `pos`에서부터 시작해, 부분 문자열 `substr`이 어디에 위치하는지 찾아준다.
+찾으면 위치를 반환하고 못찾으면 -1을 반환한다.
+```js
+let str = 'Widget with id';
+
+alert( str.indexOf('Widget') ); // 0, str은 'Widget'으로 시작함
+alert( str.indexOf('widget') ); // -1, indexOf는 대·소문자를 따지므로 원하는 문자열을 찾지 못함
+
+alert( str.indexOf("id") ); // 1, "id"는 첫 번째 위치에서 발견됨 (Widget에서 id)
+
+// pos의 경우 선택적으로 사용 가능함
+let str = 'Widget with id';
+
+alert( str.indexOf('id', 2) ) // 12
+
+// 유사하게 lastIndexOf(substr, pos)가 있음.
+// 문자열 끝에서부터 찾는 메서드임.
+```
+
+2. `includes`, `startsWith`, `endsWith`
+위치정보는 필요하지 않고 포함 여부만 알고 싶을 때 적합한 메서드이다.
+```js
+alert( "Widget".includes("id") ); // true
+alert( "Widget".includes("id", 3) ); // false, 세 번째 위치 이후엔 "id"가 없습니다.
+
+alert( "Widget".startsWith("Wid") ); // true, "Widget"은 "Wid"로 시작합니다.
+alert( "Widget".endsWith("get") ); // true, "Widget"은 "get"으로 끝납니다.
+```
+
+## 부분 문자열 추출하기
+자바스크립트엔 부분 문자열 추출과 관련된 메서드가 세가지 있다. `substring`, `substr`, `slice`
+
+1. `str.slice(strat, [, end])
+문자열의 `start`부터 `end`까지를 반환한다.
+```js
+let str = "stringify";
+alert( str.slice(0, 5) ); // 'strin', 0번째부터 5번째 위치까지(5번째 위치의 글자는 포함하지 않음)
+alert( str.slice(0, 1) ); // 's', 0번째부터 1번째 위치까지(1번째 위치의 자는 포함하지 않음)
+
+alert( str.slice(2) ); // ringify, 2번째부터 끝까지
+
+// 끝에서 4번째부터 시작해 끝에서 1번째 위치까지
+alert( str.slice(-4, -1) ); // gif
+```
+
+2. `str.substring(start, [, end]`
+slice와 매우 유사하지만 `substring`의 경우 `start`가 `end`보다 커도 된다.
+또한 음수 인수를 허용하지 않는다.
+```js
+let str = "stringify";
+
+// 동일한 부분 문자열을 반환합니다.
+alert( str.substring(2, 6) ); // "ring"
+alert( str.substring(6, 2) ); // "ring"
+
+// slice를 사용하면 결과가 다릅니다.
+alert( str.slice(2, 6) ); // "ring" (같음)
+alert( str.slice(6, 2) ); // "" (빈 문자열)
+```
+
+3. `str.substr(start, [, length])`
+`start`에서부터 싲가해 `length`개의 글자를 반환한다.
+길이를 기준으로 추출한다는 점이 차별점이다.
+```js
+let str = "stringify";
+alert( str.substr(2, 4) ); // ring, 두 번째부터 글자 네 개
+
+// 음수 가능
+let str = "stringify";
+alert( str.substr(-4, 2) ); // gi, 끝에서 네 번째 위치부터 글자 두 개
+```
+
+* 어떤 것을 사용해야 하는가?
+모두 사용해도 괜찮지만 `substr`의 경우 구식 스크립트 대응을 위해 남겨준 브라우저 전용 기능이다.
+따라서 브라우저 외의 환경에선 제대로 안될 가능성이 높다.
