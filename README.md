@@ -8,7 +8,7 @@
 
 ## 📆 1주차 : 2021.12.08
 📚 [코드 구조]() <br/>
-✔️ [엄격 모드](https://github.com/dkaskgkdua/javascript-study/blob/main/part1-core-javascript/basic/%EC%97%84%EA%B2%A9%EB%AA%A8%EB%93%9C.md) <br/>
+✔️ [엄격 모드](https://github.com/dkaskgkdua/javascript-study/blob/main/part1-core-javascript/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20%EA%B8%B0%EB%B3%B8/2.3_%EC%97%84%EA%B2%A9%EB%AA%A8%EB%93%9C.md) <br/>
 ✔️ [변수와 상수]() <br/>
 ✔️ [자료형]() <br/>
 ✔️ [alert, prompt, confirm을 이용한 상호작용]() <br/>
