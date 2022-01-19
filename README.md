@@ -52,7 +52,7 @@
 
 ## 📆 6주차 : 2022.1.12
 ✔️ [문자열](https://github.com/dkaskgkdua/javascript-study/blob/main/part1-core-javascript/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%99%80%20%EC%9E%90%EB%A3%8C%ED%98%95/5.3_%EB%AC%B8%EC%9E%90%EC%97%B4.md) <br/>
-📚 [배열]() <br/>
+✔️ [배열](https://github.com/dkaskgkdua/javascript-study/blob/main/part1-core-javascript/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%99%80%20%EC%9E%90%EB%A3%8C%ED%98%95/5.4_%EB%B0%B0%EC%97%B4.md) <br/>
 ✔️ [배열과 메서드](https://github.com/dkaskgkdua/javascript-study/blob/main/part1-core-javascript/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%99%80%20%EC%9E%90%EB%A3%8C%ED%98%95/5.5_%EB%B0%B0%EC%97%B4%EA%B3%BC_%EB%A9%94%EC%84%9C%EB%93%9C.md) <br/>
 ✔️ [iterable 객체](https://github.com/dkaskgkdua/javascript-study/blob/main/part1-core-javascript/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%99%80%20%EC%9E%90%EB%A3%8C%ED%98%95/5.6_iterable%20%EA%B0%9D%EC%B2%B4.md) <br/>
 ✔️ [맵과 셋](https://github.com/dkaskgkdua/javascript-study/blob/main/part1-core-javascript/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%99%80%20%EC%9E%90%EB%A3%8C%ED%98%95/5.7_%EB%A7%B5%EA%B3%BC%20%EC%85%8B.md) <br/>
