@@ -39,7 +39,7 @@
 ✔️ [폴리필](https://github.com/dkaskgkdua/javascript-study/blob/main/part1-core-javascript/%EC%BD%94%EB%93%9C%ED%92%88%EC%A7%88/3.6_%ED%8F%B4%EB%A6%AC%ED%95%84.md) <br/>
 ✔️ [객체](https://github.com/dkaskgkdua/javascript-study/blob/main/part1-core-javascript/%EA%B0%9D%EC%B2%B4:%EA%B8%B0%EB%B3%B8/4.1_%EA%B0%9D%EC%B2%B4.md) <br/>
 ✔️ [참조에 의한 객체 복사](https://github.com/dkaskgkdua/javascript-study/blob/main/part1-core-javascript/%EA%B0%9D%EC%B2%B4:%EA%B8%B0%EB%B3%B8/4.2_%EC%B0%B8%EC%A1%B0%EC%97%90%20%EC%9D%98%ED%95%9C%20%EA%B0%9D%EC%B2%B4%20%EB%B3%B5%EC%82%AC.md) <br/>
-✔️ [가비지 컬렉션]()
+✔️ [가비지 컬렉션](https://github.com/dkaskgkdua/javascript-study/blob/main/part1-core-javascript/%EA%B0%9D%EC%B2%B4:%EA%B8%B0%EB%B3%B8/4.3%20%EA%B0%80%EB%B9%84%EC%A7%80%20%EC%BB%AC%EB%A0%89%EC%85%98%20.md) <br/>
 
 ## 📆 5주차 : 2022.1.5
 📚 [메서드와 this]() <br/>
