@@ -28,23 +28,23 @@
 ✔️ [함수](https://github.com/dkaskgkdua/javascript-study/blob/main/part1-core-javascript/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20%EA%B8%B0%EB%B3%B8/2.15_%ED%95%A8%EC%88%98.md) <br/>
 ✔️ [함수표현식](https://github.com/dkaskgkdua/javascript-study/blob/main/part1-core-javascript/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20%EA%B8%B0%EB%B3%B8/2.16_%ED%95%A8%EC%88%98%ED%91%9C%ED%98%84%EC%8B%9D.md) <br/>
 ✔️ [화살표함수 기초](https://github.com/dkaskgkdua/javascript-study/blob/main/part1-core-javascript/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20%EA%B8%B0%EB%B3%B8/2.17_%ED%99%94%EC%82%B4%ED%91%9C%ED%95%A8%EC%88%98%EA%B8%B0%EC%B4%88.md) <br/>
-📚 [기본 문법 요약]() <br/>
+✔️ [기본 문법 요약](https://github.com/dkaskgkdua/javascript-study/blob/main/part1-core-javascript/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20%EA%B8%B0%EB%B3%B8/2.18%20%EA%B8%B0%EB%B3%B8%20%EB%AC%B8%EB%B2%95%20%EC%9A%94%EC%95%BD.md) <br/>
 ✔️ [크롬으로 디버깅하기](https://github.com/dkaskgkdua/javascript-study/blob/main/part1-core-javascript/%EC%BD%94%EB%93%9C%ED%92%88%EC%A7%88/3.1_Chrome%EC%9C%BC%EB%A1%9C%20%EB%94%94%EB%B2%84%EA%B9%85%ED%95%98%EA%B8%B0.md) <br/>
-📚 [코딩 스타일]() <br/>
+✔️ [코딩 스타일](https://github.com/dkaskgkdua/javascript-study/blob/main/part1-core-javascript/%EC%BD%94%EB%93%9C%ED%92%88%EC%A7%88/3.2_%EC%BD%94%EB%94%A9%EC%8A%A4%ED%83%80%EC%9D%BC.md) <br/>
 
 ## 📆 4주차 : 2021.12.29
 ✔️ [주석](https://github.com/dkaskgkdua/javascript-study/blob/main/part1-core-javascript/%EC%BD%94%EB%93%9C%ED%92%88%EC%A7%88/3.3_%EC%A3%BC%EC%84%9D.md) <br/>
 ✔️ [닌자 코드](https://github.com/dkaskgkdua/javascript-study/blob/main/part1-core-javascript/%EC%BD%94%EB%93%9C%ED%92%88%EC%A7%88/3.4_%EB%8B%8C%EC%9E%90%EC%BD%94%EB%93%9C.md) <br/>
-📚 [테스트 자동화와 Mocha]() <br/>
+✔️ [테스트 자동화와 Mocha](https://github.com/dkaskgkdua/javascript-study/blob/main/part1-core-javascript/%EC%BD%94%EB%93%9C%ED%92%88%EC%A7%88/3.5_mocha.html) <br/>
 ✔️ [폴리필](https://github.com/dkaskgkdua/javascript-study/blob/main/part1-core-javascript/%EC%BD%94%EB%93%9C%ED%92%88%EC%A7%88/3.6_%ED%8F%B4%EB%A6%AC%ED%95%84.md) <br/>
 ✔️ [객체](https://github.com/dkaskgkdua/javascript-study/blob/main/part1-core-javascript/%EA%B0%9D%EC%B2%B4:%EA%B8%B0%EB%B3%B8/4.1_%EA%B0%9D%EC%B2%B4.md) <br/>
 ✔️ [참조에 의한 객체 복사](https://github.com/dkaskgkdua/javascript-study/blob/main/part1-core-javascript/%EA%B0%9D%EC%B2%B4:%EA%B8%B0%EB%B3%B8/4.2_%EC%B0%B8%EC%A1%B0%EC%97%90%20%EC%9D%98%ED%95%9C%20%EA%B0%9D%EC%B2%B4%20%EB%B3%B5%EC%82%AC.md) <br/>
 ✔️ [가비지 컬렉션](https://github.com/dkaskgkdua/javascript-study/blob/main/part1-core-javascript/%EA%B0%9D%EC%B2%B4:%EA%B8%B0%EB%B3%B8/4.3%20%EA%B0%80%EB%B9%84%EC%A7%80%20%EC%BB%AC%EB%A0%89%EC%85%98%20.md) <br/>
 
 ## 📆 5주차 : 2022.1.5
-📚 [메서드와 this]() <br/>
+✔️ [메서드와 this](https://github.com/dkaskgkdua/javascript-study/blob/main/part1-core-javascript/%EA%B0%9D%EC%B2%B4:%EA%B8%B0%EB%B3%B8/4.4_%EB%A9%94%EC%84%9C%EB%93%9C%EC%99%80_this.md) <br/>
 ✔️ [new 연산자와 생성자 함수](https://github.com/dkaskgkdua/javascript-study/blob/main/part1-core-javascript/%EA%B0%9D%EC%B2%B4:%EA%B8%B0%EB%B3%B8/4.5_new%EC%97%B0%EC%82%B0%EC%9E%90%EC%99%80%20%EC%83%9D%EC%84%B1%EC%9E%90%ED%95%A8%EC%88%98.md) <br/>
-📚 [옵셔널 체이닝 ?.]() <br/>
+✔️ [옵셔널 체이닝 ?.](https://github.com/dkaskgkdua/javascript-study/blob/main/part1-core-javascript/%EA%B0%9D%EC%B2%B4:%EA%B8%B0%EB%B3%B8/4.6_%EC%98%B5%EC%85%94%EB%84%90_%EC%B2%B4%EC%9D%B4%EB%8B%9D.md) <br/>
 ✔️ [심볼형](https://github.com/dkaskgkdua/javascript-study/blob/main/part1-core-javascript/%EA%B0%9D%EC%B2%B4:%EA%B8%B0%EB%B3%B8/4.7_%EC%8B%AC%EB%B3%BC%ED%98%95.md) <br/>
 ✔️ [객체를 원시형으로 변환하기](https://github.com/dkaskgkdua/javascript-study/blob/main/part1-core-javascript/%EA%B0%9D%EC%B2%B4:%EA%B8%B0%EB%B3%B8/4-8%20%EA%B0%9D%EC%B2%B4%EB%A5%BC%20%EC%9B%90%EC%8B%9C%ED%98%95%EC%9C%BC%EB%A1%9C%20%EB%B3%80%ED%99%98%ED%95%98%EA%B8%B0.md) <br/>
 ✔️ [원시값의 메서드](https://github.com/dkaskgkdua/javascript-study/blob/main/part1-core-javascript/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%99%80%20%EC%9E%90%EB%A3%8C%ED%98%95/5.1_%EC%9B%90%EC%8B%9C%EA%B0%92%EC%9D%98%20%EB%A9%94%EC%84%9C%EB%93%9C.md) <br/>
