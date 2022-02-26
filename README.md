@@ -16,7 +16,7 @@
 
 
 ## 📆 2주차 : 2021.12.15
-📚 [기본 연산자와 수학]() <br/>
+✔️ [기본 연산자와 수학](https://github.com/dkaskgkdua/javascript-study/blob/main/part1-core-javascript/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20%EA%B8%B0%EB%B3%B8/2.8_%EA%B8%B0%EB%B3%B8%20%EC%97%B0%EC%82%B0%EC%9E%90.md) <br/>
 ✔️ [비교 연산자]() - 유경님 <br/>
 ✔️ [if와 '?'를 사용한 조건 처리](https://github.com/dkaskgkdua/javascript-study/blob/main/part1-core-javascript/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20%EA%B8%B0%EB%B3%B8/2.10_if%EB%AC%B8.md) <br/>
 ✔️ [논리 연산자](https://github.com/dkaskgkdua/javascript-study/blob/main/part1-core-javascript/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20%EA%B8%B0%EB%B3%B8/2.11_%EB%85%BC%EB%A6%AC_%EC%97%B0%EC%82%B0%EC%9E%90.md) <br/>
